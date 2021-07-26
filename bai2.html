@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai2.css">
+</head>
+<body>
+    <input type="number" placeholder="Nhap so day Fibonacci " id="count">
+    <button onclick="myFunction()">Đồng ý </button>
+
+  <div class="Fibonacci_data" id="mydiv"> 
+    <label for="Fibonacci">Chuỗi Fibonacci của bạn </label>
+
+    <div  id="Fibonacci"></div>
+
+</div>
+
+    
+     
+
+</body>
+<script>
+ 
+function myFunction() {
+    var count   = document.getElementById("count").value
+    document.getElementById("Fibonacci").innerText = '';
+    if(count < 3){
+        alert("cần Chuỗi Fibonacci là một dãy số trong đó số tiếp theo trong dãy là tổng của hai số trước đó  nên phải có tối thiểu 3 số");
+    }else{
+        document.getElementById("mydiv").classList.add("data");
+        let array = [1,1];
+        let a = 1;
+        let b = 1;
+      
+        for (let index = 0; index < count-2; index++) {
+          let c = parseInt(a+b)
+          array.push(c)
+          a=b
+          b=c
+        
+        }
+        document.getElementById("Fibonacci").append(...array.toString() );
+    }
+}
+</script>
+
+</html>

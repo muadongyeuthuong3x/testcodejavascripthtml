@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="">Nhập 4 chữ số </label>
+    <input type="number" placeholder="Nhap so  " id="count">
+    <button onclick="myFunction()"> Kiểm tra </button>
+
+    <p>Cows là các số trùng có tổng trùng </p> <span id="sodung"></span>
+    <p>Bulls là số lần thử có tổng thử </p> <span id="slktra"></span>
+</body>
+<script>
+    function getRndInteger(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+var data =getRndInteger(1000,9999)
+let solanktra = 0;
+    function myFunction() {
+        solanktra++;
+        var sodung = 0 ;
+        var number = document.getElementById("count").value
+        var array = [];
+        var array1 = [];
+        var so = data
+       array.push(...number); 
+         var sosan = String(so)
+         array1.push(...sosan)
+      
+       console.log(array[0])
+       if(array[0] === array1[0]){
+           sodung++;
+       }
+       if(array[1] === array1[1]){
+           sodung++;
+       }
+       if(array[2] === array1[2]){
+           sodung++;
+       }
+       if(array[3] === array1[3]){
+           sodung++;
+       }
+console.log(so)
+    
+      document.getElementById("slktra").innerText = '';
+      document.getElementById("sodung").innerText = '';
+      document.getElementById("slktra").append( solanktra );
+      document.getElementById("sodung").append( sodung );
+  
+
+    }
+</script>
+</html>

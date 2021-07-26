@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="Nhập chuỗi ..." id="string_input" />
+
+    <button onclick="myFunction()">Kiểm tra</button>
+</body>
+
+<script>
+
+function reverse (s) {
+return s.split('').reverse().join('');
+}
+function myFunction() {
+ var palindrome   = document.getElementById("string_input").value
+
+ var nc_palindrome  =reverse(palindrome);
+
+ if( palindrome === nc_palindrome ){
+     alert("Đây là palindrome")
+ }else{
+    alert("Không phải palindrome")
+ }
+}
+</script>
+</html>

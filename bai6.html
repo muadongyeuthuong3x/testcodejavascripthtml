@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai2.css">
+</head>
+<body>
+    <input type="number" placeholder="Nhap so  " id="count">
+    <button onclick="myFunction()"> Kết quả </button>
+
+    <div class="Fibonacci_data" id="mydiv"> 
+        <label for="Fibonacci"> Giai thừa của bạn là    </label> 
+    
+        <div  id="Fibonacci"></div>
+    
+    </div>
+    
+</body>
+
+<script>
+
+function factorial(n) {
+  return (n != 1) ? n * factorial(n - 1) : 1;
+}
+ function myFunction() {  
+    var data = document.getElementById("count").value
+
+    document.getElementById("mydiv").classList.add("data");
+    factorial(data) 
+    document.getElementById("Fibonacci").append( factorial(data)  );
+}
+
+
+</script>
+
+</html>

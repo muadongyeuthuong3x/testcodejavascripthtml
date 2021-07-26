@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="number_input"> kiểm tra số nguyên tố hay không ? </label>
+    <br>
+    <input type="number" placeholder="Nhập số  ..." id="number_input" />
+
+    <button onclick="myFunction()">Kiểm tra</button>
+
+
+</body>
+
+<script>
+function myFunction() {  
+
+    var b_number   = document.getElementById("number_input").value
+    var count = 0
+    if(b_number <2){
+        alert("cần nhập số dương >1 để kiểm tra")
+    }else{
+     for (let index = 2; index < parseInt (Math.pow(b_number, 1/2) ) ; index++) {
+        if(b_number % index === 0){
+           count ++ 
+        }
+    }
+
+        if(count === 0){
+            alert("đây là số nguyên tố ")
+    }
+    
+    else{
+        alert("đây khong phải là số nguyên tố");
+    }
+
+         
+     }
+   
+
+
+}
+</script>
+
+</html>

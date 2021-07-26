@@ -1,0 +1,6 @@
+.Fibonacci_data{
+    opacity: 0;
+}
+.Fibonacci_data.data  ,.Fibonacci_data.data1{
+    opacity: 1;
+}

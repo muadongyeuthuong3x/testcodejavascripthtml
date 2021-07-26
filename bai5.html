@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai2.css">
+</head>
+<body>
+    <input type="number" placeholder="Nhap so  " id="count">
+    <button onclick="myFunction()"> Kết quả </button>
+
+    <div class="Fibonacci_data" id="mydiv"> 
+      day la so chan 
+    
+     
+    </div>
+
+    <div class="Fibonacci_data" id="mydiv1"> 
+       Day la so le
+    
+      
+    
+    </div>
+    
+</body>
+
+<script>
+ function myFunction() {  
+    var data = document.getElementById("count").value
+
+    if(data%2 ===0){
+        document.getElementById("mydiv").classList.add("data");
+    }else{
+        document.getElementById("mydiv1").classList.add("data1");
+    }
+}
+
+
+</script>
+
+</html>

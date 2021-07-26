@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bai2.css">
+</head>
+<body>
+    <label for="bai4">Viết một chương trình chấp nhận đầu vào là chuỗi các số nhị phân 4 chữ số, phân tách bởi dấu phẩy
+        , kiểm tra xem chúng có chia hết cho 5 không. Sau đó in các số chia hết cho 5 thành dãy phân tách bởi dấu phẩy</label>
+    <textarea name="" id="bai4" cols="30" rows="10"></textarea>
+    <button onclick="myFunction()"> Kết quả </button>
+
+    <div class="Fibonacci_data" id="mydiv"> 
+        <label for="Fibonacci">Kết quả bài toán  </label>
+    
+        <div  id="Fibonacci"></div>
+    
+    </div>
+
+
+</body>
+
+<script>
+    function myFunction() {  
+      var b_array   = document.getElementById("bai4").value
+      let array = [];
+      let array_kq = [];
+      let array_kq1= [];
+      let kqbt = []
+      array.push(...b_array); 
+      array_kq1 = (array.join('').split(','))
+     
+     
+      for (let index = 0; index < array_kq1.length; index++) {
+     
+      
+          if(parseInt(array_kq1[index], 2) %5===0){
+              kqbt.push(array_kq1[index])
+          }
+      }
+      document.getElementById("mydiv").classList.add("data");
+      document.getElementById("Fibonacci").append(...kqbt.toString() );
+      
+    }
+</script>
+</html>
